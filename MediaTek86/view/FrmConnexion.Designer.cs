@@ -1,4 +1,4 @@
-﻿namespace MediaTek86
+﻿namespace MediaTek86.view
 {
     partial class FrmConnexion
     {
@@ -46,6 +46,7 @@
             // 
             this.txtPwd.Location = new System.Drawing.Point(70, 69);
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '●';
             this.txtPwd.Size = new System.Drawing.Size(151, 20);
             this.txtPwd.TabIndex = 1;
             // 
@@ -75,6 +76,7 @@
             this.btnConnexion.TabIndex = 4;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // FrmConnexion
             // 

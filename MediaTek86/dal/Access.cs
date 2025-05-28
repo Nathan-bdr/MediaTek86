@@ -15,7 +15,7 @@ namespace MediaTek86.dal
         /// <summary>
         /// chaîne de connexion à la BDD
         /// </summary>
-        private static readonly string connectionString = "Server=localhost;Port=3308;Database=mediatek;Uid=mediatek;Pwd=RespMediaTek86;";
+        private static readonly string connectionString = "Server=localhost;Port=3308;Database=mediatek86;Uid=mediatek;Pwd=RespMediaTek86;";
 
         /// <summary>
         /// instance unique de la classe

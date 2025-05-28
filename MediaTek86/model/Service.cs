@@ -11,5 +11,23 @@ namespace MediaTek86.model
     /// </summary>
     public class Service
     {
+        public int Idservice { get; }
+        public string Nom {  get; }
+
+        /// <summary>
+        /// valorise les propriétés
+        /// </summary>
+        /// <param name="idservice"></param>
+        /// <param name="nom"></param>
+        public Service(int idservice, string nom)
+        {
+            this.Idservice = idservice;
+            this.Nom = nom;
+        }
+
+        public override string ToString()
+        {
+            return this.Nom;
+        }
     }
 }
