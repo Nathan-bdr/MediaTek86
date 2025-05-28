@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace MediaTek86.view
 {
+    /// <summary>
+    /// fenêtre de gestion du personnel
+    /// </summary>
     public partial class FrmGestionPersonnel : Form
     {
+        /// <summary>
+        /// construction des composants graphiques et appel des autres initialisations
+        /// </summary>
         public FrmGestionPersonnel()
         {
             InitializeComponent();

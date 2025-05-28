@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace MediaTek86
 {
+    /// <summary>
+    /// fenêtre de connexion (seul le responsable peut accéder à l'application)
+    /// </summary>
     public partial class FrmConnexion : Form
     {
+        /// <summary>
+        /// construction des composants graphiques et appel des autres initialisations
+        /// </summary>
         public FrmConnexion()
         {
             InitializeComponent();
