@@ -143,7 +143,10 @@ namespace MediaTek86.view
                     personnel.Tel = txtTel.Text;
                     personnel.Mail = txtMail.Text;
                     personnel.Service = service;
-                    controller.UpdatePersonnel(personnel);
+                    if (MessageBox.Show("Voulez-vous vraiment confirmer la modification ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        controller.UpdatePersonnel(personnel);
+                    }
                 }
                 else
                 {
@@ -194,6 +197,7 @@ namespace MediaTek86.view
                 txtPrenom.Text = "";
                 txtTel.Text = "";
                 txtMail.Text = "";
+                cmbService.SelectedIndex = -1;
             }
         }
 
@@ -207,6 +211,22 @@ namespace MediaTek86.view
             txtPrenom.Text = "";
             txtTel.Text = "";
             txtMail.Text = "";
+        }
+
+        private void btnAfficherAbsences_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (dgvPerso.SelectedRows.Count > 0)
+            {
+                Personnel personnel = (Personnel)bdgPersonnel.List[bdgPersonnel.Position];
+                id = personnel.Idpersonnel;
+                FrmAbsences frm = new FrmAbsences(id);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
+            }
         }
     }
 }

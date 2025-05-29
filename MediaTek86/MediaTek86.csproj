@@ -55,7 +55,9 @@
     <Compile Include="controller\FrmAbsencesController.cs" />
     <Compile Include="controller\FrmConnexionController.cs" />
     <Compile Include="controller\FrmGestionPersonnelController.cs" />
+    <Compile Include="dal\AbsenceAccess.cs" />
     <Compile Include="dal\Access.cs" />
+    <Compile Include="dal\MotifAccess.cs" />
     <Compile Include="dal\PersonnelAccess.cs" />
     <Compile Include="dal\ServiceAccess.cs" />
     <Compile Include="model\Absence.cs" />

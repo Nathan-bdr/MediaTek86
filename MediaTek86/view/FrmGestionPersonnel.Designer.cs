@@ -74,6 +74,7 @@
             this.btnAfficherAbsences.TabIndex = 2;
             this.btnAfficherAbsences.Text = "Afficher absences";
             this.btnAfficherAbsences.UseVisualStyleBackColor = true;
+            this.btnAfficherAbsences.Click += new System.EventHandler(this.btnAfficherAbsences_Click);
             // 
             // btnSupprPerso
             // 
