@@ -126,10 +126,10 @@ namespace MediaTek86.view
                     controller.DelAbsence(absence);
                     RemplirListeAbsences(absence.Idpersonnel);
                 }
-                else
-                {
-                    MessageBox.Show("Une ligne doit être sélectionnée", "Information");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Une ligne doit être sélectionnée", "Information");
             }
         }
 
