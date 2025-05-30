@@ -17,7 +17,8 @@ namespace MediaTek86.view
     /// </summary>
     public partial class FrmAbsences : Form
     {
-
+        public DateTime DateDebutAvant;
+        public DateTime DateFinAvant;
         public int unId = 0;
         /// <summary>
         /// Booléen pour savoir si une modification est demandée
@@ -102,6 +103,7 @@ namespace MediaTek86.view
                 dtpDateDebut.Value = absence.Datedebut;
                 dtpDateFin.Value = absence.Datefin;
                 cmbMotif.SelectedIndex = cmbMotif.FindStringExact(absence.Motif.Libelle);
+                MemoriserDates(absence.Datedebut, absence.Datefin);
             }
             else
             {
@@ -165,6 +167,7 @@ namespace MediaTek86.view
                     absence.Motif = motif;
                     if (MessageBox.Show("Voulez-vous vraiment confirmaer la modification ?", "Confirmation de modification", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        controller.StockageDates(DateDebutAvant, DateFinAvant);
                         controller.UpdateAbsence(absence);
                     }
                 }
@@ -212,6 +215,12 @@ namespace MediaTek86.view
                 dtpDateFin.Value = DateTime.Now;
                 cmbMotif.SelectedIndex = -1;
             }
+        }
+
+        private void MemoriserDates(DateTime dateDebut, DateTime dateFin)
+        {
+            DateDebutAvant = dateDebut;
+            DateFinAvant = dateFin;
         }
     }
 }

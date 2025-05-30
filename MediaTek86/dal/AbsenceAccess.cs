@@ -13,6 +13,8 @@ namespace MediaTek86.dal
     /// </summary>
     public class AbsenceAccess
     {
+        public DateTime DateDebutAvant;
+        public DateTime DateFinAvant;
         /// <summary>
         /// instance unique de l'accès aux données
         /// </summary>
@@ -122,6 +124,12 @@ namespace MediaTek86.dal
             }
         }
 
+        public void StockageDates(DateTime dateDebut, DateTime dateFin)
+        {
+            DateDebutAvant = dateDebut;
+            DateFinAvant = dateFin;
+        }
+
         /// <summary>
         /// demande de modification d'une absence
         /// </summary>
@@ -131,12 +139,14 @@ namespace MediaTek86.dal
             if (access.Manager != null)
             {
                 string req = "update absence set idpersonnel = @idpersonnel, datedebut = @datedebut, datefin = @datefin, idmotif = @idmotif ";
-                req += "where idpersonnel = @idpersonnel and datedebut = @datedebut and datefin = @datefin;";
+                req += "where idpersonnel = @idpersonnel and datedebut = @datedebutavant and datefin = @datefinavant;";
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 parameters.Add("@idpersonnel", absence.Idpersonnel);
                 parameters.Add("@datedebut", absence.Datedebut);
                 parameters.Add("@datefin", absence.Datefin);
                 parameters.Add("@idmotif", absence.Motif.Idmotif);
+                parameters.Add("@datedebutavant", DateDebutAvant);
+                parameters.Add("@datefinavant", DateFinAvant);
                 try
                 {
                     access.Manager.ReqUpdate(req, parameters);

@@ -76,5 +76,10 @@ namespace MediaTek86.controller
         {
             absenceAccess.UpdateAbsence(absence);
         }
+
+        public void StockageDates(DateTime dateDebut, DateTime dateFin)
+        {
+            absenceAccess.StockageDates(dateDebut, dateFin);
+        }
     }
 }

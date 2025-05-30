@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpAbsences = new System.Windows.Forms.GroupBox();
             this.btnModifAbsence = new System.Windows.Forms.Button();
             this.btnSupprAbsence = new System.Windows.Forms.Button();
             this.btnAjouterAbsence = new System.Windows.Forms.Button();
             this.dgvAbsences = new System.Windows.Forms.DataGridView();
             this.grpAjouterAbsence = new System.Windows.Forms.GroupBox();
+            this.dtpDateFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateDebut = new System.Windows.Forms.DateTimePicker();
             this.btnEnregistrerAbs = new System.Windows.Forms.Button();
             this.btnAnnulerAbs = new System.Windows.Forms.Button();
             this.cmbMotif = new System.Windows.Forms.ComboBox();
             this.lblMotif = new System.Windows.Forms.Label();
             this.lblDateFin = new System.Windows.Forms.Label();
             this.lblDateDebut = new System.Windows.Forms.Label();
-            this.dtpDateDebut = new System.Windows.Forms.DateTimePicker();
-            this.dtpDateFin = new System.Windows.Forms.DateTimePicker();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.grpAbsences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsences)).BeginInit();
             this.grpAjouterAbsence.SuspendLayout();
@@ -115,6 +117,20 @@
             this.grpAjouterAbsence.TabStop = false;
             this.grpAjouterAbsence.Text = "Ajouter absence";
             // 
+            // dtpDateFin
+            // 
+            this.dtpDateFin.Location = new System.Drawing.Point(96, 66);
+            this.dtpDateFin.Name = "dtpDateFin";
+            this.dtpDateFin.Size = new System.Drawing.Size(197, 20);
+            this.dtpDateFin.TabIndex = 13;
+            // 
+            // dtpDateDebut
+            // 
+            this.dtpDateDebut.Location = new System.Drawing.Point(96, 31);
+            this.dtpDateDebut.Name = "dtpDateDebut";
+            this.dtpDateDebut.Size = new System.Drawing.Size(197, 20);
+            this.dtpDateDebut.TabIndex = 12;
+            // 
             // btnEnregistrerAbs
             // 
             this.btnEnregistrerAbs.Location = new System.Drawing.Point(371, 66);
@@ -170,19 +186,10 @@
             this.lblDateDebut.TabIndex = 0;
             this.lblDateDebut.Text = "Date début :";
             // 
-            // dtpDateDebut
+            // contextMenuStrip1
             // 
-            this.dtpDateDebut.Location = new System.Drawing.Point(96, 31);
-            this.dtpDateDebut.Name = "dtpDateDebut";
-            this.dtpDateDebut.Size = new System.Drawing.Size(197, 20);
-            this.dtpDateDebut.TabIndex = 12;
-            // 
-            // dtpDateFin
-            // 
-            this.dtpDateFin.Location = new System.Drawing.Point(96, 66);
-            this.dtpDateFin.Name = "dtpDateFin";
-            this.dtpDateFin.Size = new System.Drawing.Size(197, 20);
-            this.dtpDateFin.TabIndex = 13;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FrmAbsences
             // 
@@ -217,5 +224,6 @@
         private System.Windows.Forms.Button btnEnregistrerAbs;
         private System.Windows.Forms.DateTimePicker dtpDateFin;
         private System.Windows.Forms.DateTimePicker dtpDateDebut;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
