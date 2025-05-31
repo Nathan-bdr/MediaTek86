@@ -36,7 +36,7 @@ CREATE TABLE responsable(
    pwd VARCHAR(128)
 );
 
-CREATE USER 'mediatek'@'%' IDENTIFIED BY 'motdepasseuser';
+CREATE USER 'mediatek'@'%' IDENTIFIED BY 'RespMediaTek86';
 
 GRANT ALL PRIVILEGES ON mediatek86.* TO 'mediatek'@'%';
 
